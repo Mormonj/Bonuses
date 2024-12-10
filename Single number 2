@@ -1,0 +1,11 @@
+def single_number(nums):
+    ones, twos = 0, 0
+    for num in nums:
+        twos |= ones & num
+        ones ^= num
+        threes = ones & twos
+        ones &= ~threes
+        twos &= ~threes
+    return ones
+nums = [2, 2, 3, 2]
+print(single_number(nums))  # Output: 3
