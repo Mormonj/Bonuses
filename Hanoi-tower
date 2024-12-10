@@ -1,0 +1,9 @@
+'''hanoi fuctian stanum a 4 parapetr 1-klorneri qanak,skzbnakan dzoxi anuny kdneqn start, dzoxi anuny vori vra vor pti texapoxenq finish mejtexiny mid:ete uneneq n qanaki disk,functian pti grenq vor texapoci n-1 qanak dsik midi vra,heto starti vra mnacac dsiky texapoxi finish u heto myus bolor diskery mid-->finish.'''
+def hanoi(n, start, finish,mid):
+    if n > 0: 
+        hanoi(n - 1, start,mid, finish) #A->B
+        print(f"disk hamar {n}  {start} ---> {finish}")#A->C
+        hanoi(n - 1, mid, finish, start)#B->C
+n = 3  
+hanoi(n, 'A', 'C', 'B')  
+
